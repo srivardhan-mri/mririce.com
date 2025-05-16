@@ -492,72 +492,108 @@ header nav ul li a.active {
 .brand-card {
     background-color: var(--background-light);
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* CHANGED: Make it a flex container for row layout */
+    flex-direction: row; /* CHANGED: Arrange children in a row */
+    align-items: center; /* Vertically align items in the center of the card */
+    padding: 20px; /* Add padding to the card itself */
 }
 
-.brand-card>img.brand-main-image-placeholder {
-    width: 100%;
-    height: 200px;
+.brand-visuals {
+    flex: 0 0 auto; /* Do not grow, do not shrink, base on content/defined size */
+    /* Or a fixed width: flex: 0 0 150px; /* Adjust width as needed */
+    margin-right: 20px; /* Space between image and text */
+    padding: 0; /* Remove previous padding if any */
+    background-color: transparent; /* Remove previous background if any */
+    text-align: left; /* Align content to the left */
+}
+
+.image-placeholder-brand-bag,
+img.brand-bag-image {
+    display: block; /* Make it block to control margins for alignment */
+    width: 120px;  /* Example fixed width for a vertical bag - ADJUST */
+    height: 280px; /* Keep your desired height */
+    max-height: 280px;
+    object-fit: contain;
+    /* margin-bottom: 0; /* Removed bottom margin, spacing handled by parent padding/gap */
+}
+.image-placeholder-brand-bag { /* Styles for the placeholder div itself */
     background-color: #e9e9e9;
     display: flex;
     align-items: center;
     justify-content: center;
     font-style: italic;
     color: #888;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .brand-info {
-    padding: 25px;
-    text-align: center;
-    flex-grow: 1;
+    padding: 0; /* Remove previous padding, card has padding now */
+    text-align: left; /* CHANGED: Align text to the left */
+    flex-grow: 1; /* Allow text info to take remaining space */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align items like button to the left */
 }
 
-.brand-logo {
-    max-height: 60px;
-    height: 60px;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-    color: #999;
-    margin-bottom: 15px;
-    padding: 5px;
+.brand-logo-inline { /* Style if you use a small logo within .brand-info */
+    max-height: 30px;
+    margin-bottom: 8px;
+    align-self: flex-start; /* Ensure logo is left aligned */
 }
 
 .brand-info h3 {
     color: var(--mri-logo-blue);
     margin-top: 0;
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Or adjust as needed */
+    text-align: left; /* Ensure heading is left aligned */
 }
-
 .brand-info p {
     margin-bottom: 20px;
     font-size: 0.95rem;
-    flex-grow: 1;
+    /* flex-grow: 1; /* This might not be needed if button is consistently last */
+    text-align: left; /* Ensure paragraph is left aligned */
+}
+.brand-info .btn {
+    margin-top: 15px; /* Provide some space above the button */
+    align-self: flex-start; /* Ensure button is left-aligned */
 }
 
-.all-varieties-link {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.all-varieties-link p {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.all-varieties-link .btn-accent {
-    padding: 14px 32px;
-    font-size: 1rem;
-    font-weight: 700;
+/* Responsive adjustment for brand cards if they were in a multi-column grid */
+@media (max-width: 768px) { /* Example breakpoint, adjust as needed */
+    .brands-grid { /* Assuming .brands-grid is the parent of .brand-card */
+        /* If you want brand cards to stack on small screens: */
+        /* grid-template-columns: 1fr; */
+    }
+    .brand-card {
+        flex-direction: column; /* Stack image above text on small screens */
+        align-items: center; /* Center items when stacked */
+        text-align: center; /* Center text when stacked */
+    }
+    .brand-visuals {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between image and text when stacked */
+        width: 100%; /* Allow visual block to be full width */
+    }
+    .image-placeholder-brand-bag,
+    img.brand-bag-image {
+        margin-left: auto; /* Center image within .brand-visuals */
+        margin-right: auto;
+        max-width: 60%; /* Adjust as needed for stacked view */
+    }
+    .brand-info {
+        align-items: center; /* Center text block items */
+        text-align: center; /* Center text within info block */
+    }
+    .brand-info h3, .brand-info p {
+        text-align: center;
+    }
+    .brand-info .btn {
+        align-self: center; /* Center button when stacked */
+    }
 }
 
 /* --- Commitment Section (Homepage) --- */
