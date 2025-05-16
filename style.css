@@ -3,20 +3,29 @@
 
 /* --- CSS Variables --- */
 :root {
-    --mri-logo-blue: #0052A5;   /* Primary Blue from Logo - ADJUST IF YOU HAVE EXACT HEX */
-    --mri-logo-red: #D92525;    /* Accent Red from Logo - ADJUST IF YOU HAVE EXACT HEX */
-    --mri-logo-gray: #B0B0B0;   /* Gray/Silver from Logo lines */
+    --mri-logo-blue: #0052A5;
+    /* Primary Blue from Logo - ADJUST IF YOU HAVE EXACT HEX */
+    --mri-logo-red: #D92525;
+    /* Accent Red from Logo - ADJUST IF YOU HAVE EXACT HEX */
+    --mri-logo-gray: #B0B0B0;
+    /* Gray/Silver from Logo lines */
 
     --text-dark: #333333;
-    --text-light: #f0f0f0;       /* Light text for dark backgrounds */
-    --text-body: #454545;        /* Slightly softer dark for body text */
+    --text-light: #f0f0f0;
+    /* Light text for dark backgrounds */
+    --text-body: #454545;
+    /* Slightly softer dark for body text */
 
     --background-light: #FFFFFF;
-    --background-offwhite: #F5F5DC; /* Existing beige/cream */
-    --background-subtle-gray: #f7f7f7; /* For very light section backgrounds */
+    --background-offwhite: #F5F5DC;
+    /* Existing beige/cream */
+    --background-subtle-gray: #f7f7f7;
+    /* For very light section backgrounds */
 
-    --font-primary: 'Montserrat', 'Verdana', sans-serif; /* For headings */
-    --font-secondary: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* For body text */
+    --font-primary: 'Montserrat', 'Verdana', sans-serif;
+    /* For headings */
+    --font-secondary: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* For body text */
 }
 
 
@@ -43,7 +52,10 @@ body {
     padding: 0 15px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-primary);
     color: var(--mri-logo-blue);
     margin-bottom: 0.75em;
@@ -51,15 +63,53 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
-h1 { font-size: 2.8rem; font-weight: 800; }
-h2 { font-size: 2.2rem; text-align: center; margin-bottom: 1.5em; font-weight: 700; }
-h3 { font-size: 1.5rem; font-weight: 600; }
-h4 { font-size: 1.2rem; font-weight: 600; }
-p { margin-bottom: 1em; font-size: 1.05rem; }
-a { text-decoration: none; color: var(--mri-logo-blue); transition: color 0.3s ease; }
-a:hover { text-decoration: underline; color: var(--mri-logo-red); }
-img { max-width: 100%; height: auto; display: block; }
-ul { list-style: none; }
+h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1.05rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mri-logo-blue);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--mri-logo-red);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
 
 /* --- Buttons --- */
 .btn {
@@ -74,149 +124,630 @@ ul { list-style: none; }
     cursor: pointer;
     border: 2px solid transparent;
     font-size: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); text-decoration: none;}
-.btn:active { transform: translateY(1px); box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
 
-.btn-primary { background-color: var(--mri-logo-blue); color: var(--text-light); border-color: var(--mri-logo-blue); }
-.btn-primary:hover { background-color: #003E7E; border-color: #003E7E; color: var(--text-light); }
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
 
-.btn-secondary { background-color: transparent; color: var(--mri-logo-red); border: 2px solid var(--mri-logo-red); font-weight: 700; }
-.btn-secondary:hover { background-color: var(--mri-logo-red); color: var(--text-light); }
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-.btn-accent { background-color: var(--mri-logo-red); color: var(--text-light); border-color: var(--mri-logo-red); }
-.btn-accent:hover { background-color: #AE1F1F; border-color: #AE1F1F; color: var(--text-light); }
+.btn-primary {
+    background-color: var(--mri-logo-blue);
+    color: var(--text-light);
+    border-color: var(--mri-logo-blue);
+}
 
-.btn-outline-blue { background-color: transparent; color: var(--mri-logo-blue); border: 2px solid var(--mri-logo-blue); font-weight: 700; }
-.btn-outline-blue:hover { background-color: var(--mri-logo-blue); color: var(--text-light); }
+.btn-primary:hover {
+    background-color: #003E7E;
+    border-color: #003E7E;
+    color: var(--text-light);
+}
 
-.btn-outline-red { background-color: transparent; color: var(--mri-logo-red); border: 2px solid var(--mri-logo-red); font-weight: 700; }
-.btn-outline-red:hover { background-color: var(--mri-logo-red); color: var(--text-light); }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--mri-logo-red);
+    border: 2px solid var(--mri-logo-red);
+    font-weight: 700;
+}
+
+.btn-secondary:hover {
+    background-color: var(--mri-logo-red);
+    color: var(--text-light);
+}
+
+.btn-accent {
+    background-color: var(--mri-logo-red);
+    color: var(--text-light);
+    border-color: var(--mri-logo-red);
+}
+
+.btn-accent:hover {
+    background-color: #AE1F1F;
+    border-color: #AE1F1F;
+    color: var(--text-light);
+}
+
+.btn-outline-blue {
+    background-color: transparent;
+    color: var(--mri-logo-blue);
+    border: 2px solid var(--mri-logo-blue);
+    font-weight: 700;
+}
+
+.btn-outline-blue:hover {
+    background-color: var(--mri-logo-blue);
+    color: var(--text-light);
+}
+
+.btn-outline-red {
+    background-color: transparent;
+    color: var(--mri-logo-red);
+    border: 2px solid var(--mri-logo-red);
+    font-weight: 700;
+}
+
+.btn-outline-red:hover {
+    background-color: var(--mri-logo-red);
+    color: var(--text-light);
+}
 
 /* --- Header --- */
 header {
-    background-color: var(--background-light); padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0;
-    z-index: 1000; width: 100%; border-bottom: 3px solid var(--mri-logo-gray);
+    background-color: var(--background-light);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 3px solid var(--mri-logo-gray);
 }
-header .container { display: flex; justify-content: space-between; align-items: center; }
-#logo { height: 60px; }
-.logo-text { font-family: var(--font-primary); font-size: 1.8rem; font-weight: 800; color: var(--mri-logo-blue); }
-.logo-link { text-decoration: none; }
-header nav ul { display: flex; align-items: center; }
-header nav ul li { margin-left: 25px; }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 60px;
+}
+
+.logo-text {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--mri-logo-blue);
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
 header nav ul li a {
-    font-family: var(--font-primary); color: var(--text-dark); font-weight: 600;
-    padding: 5px 0; position: relative; text-transform: uppercase;
-    font-size: 0.9rem; letter-spacing: 0.5px;
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
+
 header nav ul li a::after {
-    content: ''; position: absolute; bottom: -2px; left: 0;
-    width: 0; height: 2px; background-color: var(--mri-logo-blue);
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--mri-logo-blue);
     transition: width 0.3s ease;
 }
-header nav ul li a:hover::after, header nav ul li a.active::after { width: 100%; }
-header nav ul li a:hover, header nav ul li a.active { color: var(--mri-logo-blue); text-decoration: none; }
-.cta-nav {
-    background-color: var(--mri-logo-red); color: var(--text-light) !important;
-    padding: 8px 18px !important; border-radius: 6px; font-weight: bold;
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+    width: 100%;
 }
-.cta-nav:hover { background-color: #AE1F1F; color: var(--text-light) !important; }
-.cta-nav::after { display: none !important; }
-.mobile-nav-toggle { display: none; background: none; border: none; color: var(--mri-logo-blue); font-size: 1.8rem; cursor: pointer; }
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--mri-logo-blue);
+    text-decoration: none;
+}
+
+.cta-nav {
+    background-color: var(--mri-logo-red);
+    color: var(--text-light) !important;
+    padding: 8px 18px !important;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.cta-nav:hover {
+    background-color: #AE1F1F;
+    color: var(--text-light) !important;
+}
+
+.cta-nav::after {
+    display: none !important;
+}
+
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--mri-logo-blue);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
 
 /* --- Hero Section --- */
-.hero { position: relative; color: var(--text-light); text-align: center; display: flex; align-items: center; justify-content: center; min-height: 85vh; overflow: hidden; }
-.hero-bg-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: -2; }
-.hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: -1; }
-.hero-content { position: relative; z-index: 1; padding: 40px 20px; max-width: 800px; }
-.hero h1 { color: var(--text-light); font-size: 3.2rem; margin-bottom: 0.5em; font-weight: 800; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); }
-.hero h1 .highlight { color: var(--mri-logo-red); }
-.hero p { font-size: 1.25rem; margin-bottom: 1.5em; color: var(--text-light); text-shadow: 1px 1px 4px rgba(0,0,0,0.6); }
-.hero .btn { margin: 10px; }
-.hero .btn-secondary { color: var(--text-light); border-color: var(--text-light); }
-.hero .btn-secondary:hover { background-color: var(--text-light); color: var(--mri-logo-blue); }
+.hero {
+    position: relative;
+    color: var(--text-light);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    overflow: hidden;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px;
+    max-width: 800px;
+}
+
+.hero h1 {
+    color: var(--text-light);
+    font-size: 3.2rem;
+    margin-bottom: 0.5em;
+    font-weight: 800;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 .highlight {
+    color: var(--mri-logo-red);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5em;
+    color: var(--text-light);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero .btn {
+    margin: 10px;
+}
+
+.hero .btn-secondary {
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+.hero .btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--mri-logo-blue);
+}
 
 /* --- Page Header (for subpages) --- */
 .page-header {
-    color: var(--text-light); padding: 70px 20px; text-align: center; margin-bottom: 0;
-    position: relative; background-color: var(--mri-logo-blue); /* Fallback */
-    background-repeat: no-repeat; background-position: center center; background-size: cover;
+    color: var(--text-light);
+    padding: 70px 20px;
+    text-align: center;
+    margin-bottom: 0;
+    position: relative;
+    background-color: var(--mri-logo-blue);
+    /* Fallback */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
+
 .page-header::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(rgba(0, 82, 165, 0.75), rgba(0, 82, 165, 0.85)); /* Logo Blue gradient overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 82, 165, 0.75), rgba(0, 82, 165, 0.85));
+    /* Logo Blue gradient overlay */
     z-index: 1;
 }
-.page-header.about-us-bg { background-image: url('images/about-us-banner.jpeg'); }
-.page-header.brands-bg { background-image: url('images/brands-banner-packaging.jpg'); }
-.page-header.quality-bg { background-image: url('images/quality-banner-inspection.jpg'); }
-.page-header.contact-bg { background-image: url('images/contact-banner-miryalaguda.jpg'); }
-.page-header.products-bg { background-image: url('images/products-banner-rice-varieties.jpeg'); }
-.page-header .container { position: relative; z-index: 2; }
-.page-header h1 { color: var(--text-light); font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-.page-header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: var(--text-light); text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+
+.page-header.about-us-bg {
+    background-image: url('images/about-us-banner.jpeg');
+}
+
+.page-header.brands-bg {
+    background-image: url('images/brands-banner-packaging.jpg');
+}
+
+.page-header.quality-bg {
+    background-image: url('images/quality-banner-inspection.jpg');
+}
+
+.page-header.contact-bg {
+    background-image: url('images/contact-banner-miryalaguda.jpg');
+}
+
+.page-header.products-bg {
+    background-image: url('images/products-banner-rice-varieties.jpeg');
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    color: var(--text-light);
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-light);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 
 /* --- USPs Section (Homepage) --- */
-.usps { padding: 60px 0; background-color: var(--background-light); }
-.usp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.usp-item { padding: 25px; border-radius: 8px; text-align: center; }
-.usp-item .usp-icon { max-height: 60px; margin: 0 auto 20px auto; display: block; }
-.usp-item h3 { color: var(--mri-logo-blue); font-weight: 700; margin-bottom: 10px; font-size: 1.4rem; }
-.usp-item p { font-size: 0.95rem; line-height: 1.6; }
+.usps {
+    padding: 60px 0;
+    background-color: var(--background-light);
+}
+
+.usp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.usp-item {
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.usp-item .usp-icon {
+    max-height: 60px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.usp-item h3 {
+    color: var(--mri-logo-blue);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.usp-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
 
 /* --- Featured Brands Section (Homepage) --- */
-.featured-brands { padding: 60px 0; background-color: var(--background-offwhite); }
-.brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-bottom: 40px; }
-.brand-card { background-color: var(--background-light); border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; }
-.brand-card > img.brand-main-image-placeholder { width: 100%; height: 200px; background-color: #e9e9e9; display: flex; align-items: center; justify-content: center; font-style: italic; color: #888; }
-.brand-info { padding: 25px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; align-items: center; }
-.brand-logo { max-height: 60px; height: 60px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; font-style: italic; color: #999; margin-bottom: 15px; padding: 5px; }
-.brand-info h3 { color: var(--mri-logo-blue); margin-top: 0; font-size: 1.8rem;}
-.brand-info p { margin-bottom: 20px; font-size: 0.95rem; flex-grow: 1; }
-.all-varieties-link { text-align: center; margin-top: 40px; }
-.all-varieties-link p { font-style: italic; color: #555; margin-bottom: 15px; }
-.all-varieties-link .btn-accent { padding: 14px 32px; font-size: 1rem; font-weight: 700; }
+.featured-brands {
+    padding: 60px 0;
+    background-color: var(--background-offwhite);
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.brand-card {
+    background-color: var(--background-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-card>img.brand-main-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #888;
+}
+
+.brand-info {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-logo {
+    max-height: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #999;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.brand-info h3 {
+    color: var(--mri-logo-blue);
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.brand-info p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.all-varieties-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.all-varieties-link p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.all-varieties-link .btn-accent {
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+}
 
 /* --- Commitment Section (Homepage) --- */
-.commitment { position: relative; color: var(--text-light); padding: 80px 0; text-align: center; overflow: hidden; }
-.commitment-bg-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: -2; }
-.commitment::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 82, 165, 0.75); z-index: -1; }
-.commitment-content { position: relative; z-index: 1; max-width: 750px; }
-.commitment h2 { color: var(--text-light); font-size: 2.5rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
-.commitment .btn-secondary { color: var(--text-light); border-color: var(--text-light); }
-.commitment .btn-secondary:hover { background-color: var(--text-light); color: var(--mri-logo-blue); }
+.commitment {
+    position: relative;
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.commitment-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.commitment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 82, 165, 0.75);
+    z-index: -1;
+}
+
+.commitment-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+}
+
+.commitment h2 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.commitment .btn-secondary {
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+.commitment .btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--mri-logo-blue);
+}
 
 /* --- CTA Final (Homepage) --- */
-.cta-final { padding: 60px 0; background-color: var(--background-light); text-align: center; }
+.cta-final {
+    padding: 60px 0;
+    background-color: var(--background-light);
+    text-align: center;
+}
 
 /* --- Footer --- */
-footer { background-color: var(--mri-logo-blue); color: var(--text-light); padding: 50px 20px 30px; font-size: 0.95rem; line-height: 1.6; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
-.footer-col { display: flex; flex-direction: column; }
-.footer-col h4 { color: var(--text-light); margin-bottom: 20px; font-size: 1.25rem; font-family: var(--font-primary); font-weight: 600; padding-bottom: 10px; border-bottom: 1px solid var(--mri-logo-gray); }
-.footer-logo { max-height: 60px; width: auto; margin-bottom: 20px; background-color: var(--background-light); padding: 5px; border-radius: 4px; align-self: flex-start; }
-.footer-col p { font-size: 0.95rem; margin-bottom: 12px; color: var(--text-light); }
-.footer-col p i { margin-right: 10px; color: var(--text-light); width: 1em; text-align: center; }
-.footer-col ul { padding-left: 0; margin-bottom: 15px; }
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col ul li a { color: var(--text-light); display: inline-block; }
-.footer-col ul li a:hover { color: var(--mri-logo-red); text-decoration: underline; }
-.social-icons { margin-top: 15px; }
-.social-icons a { color: var(--text-light); font-size: 1.6rem; margin-right: 18px; transition: color 0.3s ease, transform 0.3s ease; }
-.social-icons a:last-child { margin-right: 0; }
-.social-icons a:hover { color: var(--mri-logo-red); transform: scale(1.1); text-decoration: none; }
-.copyright { text-align: center; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.25); font-size: 0.9rem; color: #dddddd; }
-.copyright a { color: #dddddd; text-decoration: underline; }
-.copyright a:hover { color: var(--text-light); }
+footer {
+    background-color: var(--mri-logo-blue);
+    color: var(--text-light);
+    padding: 50px 20px 30px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col h4 {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--mri-logo-gray);
+}
+
+.footer-logo {
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 20px;
+    background-color: var(--background-light);
+    padding: 5px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.footer-col p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: var(--text-light);
+}
+
+.footer-col p i {
+    margin-right: 10px;
+    color: var(--text-light);
+    width: 1em;
+    text-align: center;
+}
+
+.footer-col ul {
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--text-light);
+    display: inline-block;
+}
+
+.footer-col ul li a:hover {
+    color: var(--mri-logo-red);
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.6rem;
+    margin-right: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons a:hover {
+    color: var(--mri-logo-red);
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 0.9rem;
+    color: #dddddd;
+}
+
+.copyright a {
+    color: #dddddd;
+    text-decoration: underline;
+}
+
+.copyright a:hover {
+    color: var(--text-light);
+}
 
 /* === Styles for About Us Page (about.html) === */
-.about-section { padding: 60px 20px; background-color: var(--background-light); }
+.about-section {
+    padding: 60px 20px;
+    background-color: var(--background-light);
+}
+
 /* Alternating backgrounds for .about-section blocks */
-main > .about-section:nth-child(odd) { background-color: var(--background-light); } /* First one white */
-main > .about-section:nth-child(even) { background-color: var(--background-offwhite); } /* Second one beige */
+main>.about-section:nth-child(odd) {
+    background-color: var(--background-light);
+}
+
+/* First one white */
+main>.about-section:nth-child(even) {
+    background-color: var(--background-offwhite);
+}
+
+/* Second one beige */
 /* This will continue to alternate. If values-section is in between, it might break simple nth-child */
 
 .about-content {
@@ -227,210 +758,990 @@ main > .about-section:nth-child(even) { background-color: var(--background-offwh
     width: 100%;
     /* margin-bottom: 40px; /* Removed as section has padding */
 }
-.about-content.image-first .about-image { order: -1; }
-.about-content.image-first .about-text { order: 1; }
-.about-text h2 { color: var(--mri-logo-blue); margin-bottom: 20px; font-size: 2.5rem; }
-.about-text .highlight { color: var(--mri-logo-red); font-weight: bold; }
-.about-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px; color: var(--text-body); }
-.about-image { text-align: center; }
-.about-image img, .image-placeholder-about {
-    width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+.about-content.image-first .about-image {
+    order: -1;
 }
+
+.about-content.image-first .about-text {
+    order: 1;
+}
+
+.about-text h2 {
+    color: var(--mri-logo-blue);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.about-text .highlight {
+    color: var(--mri-logo-red);
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--text-body);
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img,
 .image-placeholder-about {
-    height: 300px; background-color: #e9e9e9; display: flex;
-    align-items: center; justify-content: center; font-style: italic;
-    color: #888; font-size: 1.1rem; border-radius: 8px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.values-section { padding: 60px 20px; background-color: var(--background-subtle-gray); }
-.values-section h2.section-title { text-align: center; color: var(--mri-logo-blue); margin-bottom: 40px; font-size: 2.2rem; }
-.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.image-placeholder-about {
+    height: 300px;
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #888;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+.values-section {
+    padding: 60px 20px;
+    background-color: var(--background-subtle-gray);
+}
+
+.values-section h2.section-title {
+    text-align: center;
+    color: var(--mri-logo-blue);
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
 .value-item {
-    background-color: var(--background-light); padding: 30px 25px; border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; display: flex; flex-direction: column; align-items: center;
+    background-color: var(--background-light);
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.value-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 82, 165, 0.15); }
-.value-item i { font-size: 3rem; color: var(--mri-logo-blue); margin-bottom: 20px; display: block; line-height: 1; }
-.value-item h3 { font-family: var(--font-primary); color: var(--text-dark); margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
-.value-item p { font-family: var(--font-secondary); font-size: 0.95rem; line-height: 1.6; color: var(--text-body); flex-grow: 1; }
 
-.cta-about { background-color: var(--mri-logo-blue); color: var(--text-light); padding: 50px 20px; text-align: center;}
-.cta-about h2 { color: var(--text-light); margin-bottom:20px;}
-.cta-about p {color: var(--text-light); margin-bottom:30px; max-width:600px; margin-left:auto; margin-right:auto;}
-.cta-about .btn-primary { background-color: var(--mri-logo-red); border-color: var(--mri-logo-red); color: var(--text-light); }
-.cta-about .btn-primary:hover { background-color: #AE1F1F; border-color: #AE1F1F;}
-.cta-about .btn-secondary { color: var(--text-light); border-color: var(--text-light); }
-.cta-about .btn-secondary:hover { background-color: var(--text-light); color: var(--mri-logo-blue); }
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 82, 165, 0.15);
+}
+
+.value-item i {
+    font-size: 3rem;
+    color: var(--mri-logo-blue);
+    margin-bottom: 20px;
+    display: block;
+    line-height: 1;
+}
+
+.value-item h3 {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.value-item p {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-body);
+    flex-grow: 1;
+}
+
+.cta-about {
+    background-color: var(--mri-logo-blue);
+    color: var(--text-light);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-about h2 {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.cta-about p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-about .btn-primary {
+    background-color: var(--mri-logo-red);
+    border-color: var(--mri-logo-red);
+    color: var(--text-light);
+}
+
+.cta-about .btn-primary:hover {
+    background-color: #AE1F1F;
+    border-color: #AE1F1F;
+}
+
+.cta-about .btn-secondary {
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+.cta-about .btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--mri-logo-blue);
+}
 
 /* === Styles for Brands Page (brands.html) === */
-.brands-intro-section { padding: 40px 20px; text-align: center; background-color: var(--background-light); }
-.brand-showcase-section { padding: 50px 20px; }
-.brand-profile { padding: 40px; margin-bottom: 40px; border-radius: 10px; }
-.brand-profile.super-fine-star-bg { background-color: var(--background-light); border: 2px solid var(--mri-logo-blue); }
-.brand-profile.mri-brand-bg { background-color: var(--background-offwhite); border: 2px solid var(--mri-logo-gray); }
-.brand-content { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; width: 100%; }
-.brand-content.image-right { grid-template-columns: 2fr 1fr; }
-.brand-content.image-right .brand-visuals { order: 1; }
-.brand-content.image-right .brand-details { order: 0; }
-.brand-visuals { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.brand-visuals img.brand-logo-display, .brand-visuals .image-placeholder-logo-brand { max-height: 80px; width: auto; display: block; }
-.brand-visuals img.brand-main-image, .brand-visuals .image-placeholder-main-brand { width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); display: block; margin: 0 auto; }
-.image-placeholder-logo-brand, .image-placeholder-main-brand { background-color: #e9e9e9; display: flex; align-items: center; justify-content: center; font-style: italic; color: #888; padding: 10px; }
-.image-placeholder-logo-brand { height: 80px; width: auto; min-width: 150px; border-radius: 4px;}
-.image-placeholder-main-brand { height: 250px; border-radius: 8px;}
-.brand-details h3 { font-size: 2.5rem; color: var(--mri-logo-blue); margin-bottom: 10px; font-weight: 800; }
-.brand-details .tagline { font-size: 1.3rem; font-style: italic; color: #555; margin-bottom: 20px; display: block; }
-.brand-details p { font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8; }
-.brand-varieties h4 { font-size: 1.4rem; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px; font-weight: 700; }
-.brand-varieties ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.brand-varieties ul li { background-color: rgba(0, 82, 165, 0.1); color: var(--mri-logo-blue); padding: 8px 15px; border-radius: 20px; font-size:0.9rem; font-weight:600; margin-bottom:0;}
-.brand-profile.super-fine-star-bg .brand-varieties ul li { background-color: rgba(217, 37, 37, 0.1); color: var(--mri-logo-red); }
-.brand-details .btn { margin-top: 25px; }
+.brands-intro-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-light);
+}
+
+.brand-showcase-section {
+    padding: 50px 20px;
+}
+
+.brand-profile {
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.brand-profile.super-fine-star-bg {
+    background-color: var(--background-light);
+    border: 2px solid var(--mri-logo-blue);
+}
+
+.brand-profile.mri-brand-bg {
+    background-color: var(--background-offwhite);
+    border: 2px solid var(--mri-logo-gray);
+}
+
+.brand-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+.brand-content.image-right {
+    grid-template-columns: 2fr 1fr;
+}
+
+.brand-content.image-right .brand-visuals {
+    order: 1;
+}
+
+.brand-content.image-right .brand-details {
+    order: 0;
+}
+
+.brand-visuals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-visuals img.brand-logo-display,
+.brand-visuals .image-placeholder-logo-brand {
+    max-height: 80px;
+    width: auto;
+    display: block;
+}
+
+.brand-visuals img.brand-main-image,
+.brand-visuals .image-placeholder-main-brand {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.image-placeholder-logo-brand,
+.image-placeholder-main-brand {
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #888;
+    padding: 10px;
+}
+
+.image-placeholder-logo-brand {
+    height: 80px;
+    width: auto;
+    min-width: 150px;
+    border-radius: 4px;
+}
+
+.image-placeholder-main-brand {
+    height: 250px;
+    border-radius: 8px;
+}
+
+.brand-details h3 {
+    font-size: 2.5rem;
+    color: var(--mri-logo-blue);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.brand-details .tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.brand-details p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.brand-varieties h4 {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.brand-varieties ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.brand-varieties ul li {
+    background-color: rgba(0, 82, 165, 0.1);
+    color: var(--mri-logo-blue);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.brand-profile.super-fine-star-bg .brand-varieties ul li {
+    background-color: rgba(217, 37, 37, 0.1);
+    color: var(--mri-logo-red);
+}
+
+.brand-details .btn {
+    margin-top: 25px;
+}
 
 /* === Styles for Quality Assurance Page (quality.html) === */
-.quality-intro-section { padding: 40px 20px; text-align: center; background-color: var(--background-light); }
-.quality-process-section { padding: 50px 20px; }
-.process-step {
-    background-color: var(--background-light); padding: 30px; margin-bottom: 30px;
-    border-radius: 10px; display: grid; grid-template-columns: 1fr 2fr;
-    gap: 40px; align-items: center; border-left: 5px solid var(--mri-logo-blue);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+.quality-intro-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-light);
 }
+
+.quality-process-section {
+    padding: 50px 20px;
+}
+
+.process-step {
+    background-color: var(--background-light);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+    border-left: 5px solid var(--mri-logo-blue);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
 .process-step:nth-child(even) {
-    grid-template-columns: 2fr 1fr; border-left: none;
+    grid-template-columns: 2fr 1fr;
+    border-left: none;
     border-right: 5px solid var(--mri-logo-red);
 }
-.process-step:nth-child(even) .step-visuals { order: 1; }
-.process-step:nth-child(even) .step-description { order: 0; }
-.step-visuals { text-align: center; }
-.step-visuals .icon-placeholder, .step-visuals .image-placeholder-quality {
-    width: 100%; max-width: 350px; height: 200px; background-color: #e0e0e0;
-    border-radius: 8px; display: flex; align-items: center; justify-content: center;
-    font-style: italic; color: #777; margin: 0 auto;
+
+.process-step:nth-child(even) .step-visuals {
+    order: 1;
 }
-.step-visuals i { font-size: 5rem; color: var(--mri-logo-blue); }
-.step-description h3 { font-size: 1.8rem; color: var(--mri-logo-blue); margin-bottom: 15px; }
-.step-description p { font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; }
-.step-description ul { list-style: none; padding-left: 0; margin-top: 15px; }
-.step-description ul li { padding-left: 25px; position: relative; margin-bottom: 8px; font-size: 1rem; }
+
+.process-step:nth-child(even) .step-description {
+    order: 0;
+}
+
+.step-visuals {
+    text-align: center;
+}
+
+.step-visuals .icon-placeholder,
+.step-visuals .image-placeholder-quality {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #777;
+    margin: 0 auto;
+}
+
+.step-visuals i {
+    font-size: 5rem;
+    color: var(--mri-logo-blue);
+}
+
+.step-description h3 {
+    font-size: 1.8rem;
+    color: var(--mri-logo-blue);
+    margin-bottom: 15px;
+}
+
+.step-description p {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.step-description ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.step-description ul li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
 .step-description ul li::before {
-    content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900;
-    color: var(--mri-logo-blue); position: absolute; left: 0; top: 3px;
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--mri-logo-blue);
+    position: absolute;
+    left: 0;
+    top: 3px;
 }
-.certifications-section { padding: 40px 20px; text-align: center; background-color: var(--background-light); }
-.quality-conclusion { padding: 50px 20px; text-align: center; background-color: var(--background-offwhite); }
+
+.certifications-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-light);
+}
+
+.quality-conclusion {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--background-offwhite);
+}
 
 /* === Styles for Products Page (products.html) === */
-.products-section { padding: 50px 0; }
-.products-intro { text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; padding: 0 20px; }
-.rice-category { margin-bottom: 50px; }
-.rice-category h3.category-title { text-align: center; font-size: 2.2rem; color: var(--mri-logo-blue); margin-bottom: 30px; padding-bottom: 10px; border-bottom: 2px solid var(--mri-logo-red); display: inline-block; }
-.category-title-wrapper { text-align: center; margin-bottom: 30px; }
-.product-grid-wrapper { display: flex; justify-content: center; }
-.product-grid { display: inline-grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; align-items: stretch; max-width: 100%; }
-.product-card { background-color: var(--background-light); border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; }
-.product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 82, 165, 0.15); }
-.product-image-placeholder { width: 100%; height: 220px; background-color: #e9e9e9; display: flex; align-items: center; justify-content: center; font-style: italic; color: #888; flex-shrink: 0; }
-.product-info { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-.product-info-main-content { flex-grow: 1; }
-.product-info h4.product-name { font-size: 1.6rem; color: var(--mri-logo-blue); margin-bottom: 10px; }
-.product-info .brand-tag { font-size: 0.8rem; font-weight: bold; color: var(--text-light); background-color: var(--mri-logo-blue); padding: 3px 8px; border-radius: 12px; display: inline-block; margin-bottom: 10px; text-transform: uppercase; }
-.product-info .brand-tag.superfine { background-color: var(--mri-logo-red); color: var(--text-light); }
-.product-info p.description { font-size: 0.95rem; margin-bottom: 15px; color: var(--text-body); line-height: 1.6; }
-.product-attributes { font-size: 0.9rem; color: #555; margin-bottom: 10px; line-height: 1.5; }
-.product-attributes strong { color: var(--text-dark); }
-.product-pack-sizes { font-size: 0.9rem; font-weight: bold; color: var(--mri-logo-blue); margin-bottom: 20px; }
-.product-info .btn { margin-top: auto; align-self: flex-start; }
+.products-section {
+    padding: 50px 0;
+}
+
+.products-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.rice-category {
+    margin-bottom: 50px;
+}
+
+.rice-category h3.category-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--mri-logo-blue);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--mri-logo-red);
+    display: inline-block;
+}
+
+.category-title-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-grid-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.product-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+    max-width: 100%;
+}
+
+.product-card {
+    background-color: var(--background-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 82, 165, 0.15);
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 220px;
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #888;
+    flex-shrink: 0;
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info-main-content {
+    flex-grow: 1;
+}
+
+.product-info h4.product-name {
+    font-size: 1.6rem;
+    color: var(--mri-logo-blue);
+    margin-bottom: 10px;
+}
+
+.product-info .brand-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-light);
+    background-color: var(--mri-logo-blue);
+    padding: 3px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.product-info .brand-tag.superfine {
+    background-color: var(--mri-logo-red);
+    color: var(--text-light);
+}
+
+.product-info p.description {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+.product-attributes {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.product-attributes strong {
+    color: var(--text-dark);
+}
+
+.product-pack-sizes {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--mri-logo-blue);
+    margin-bottom: 20px;
+}
+
+.product-info .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
 
 /* === Styles for Contact Page (contact.html) === */
-.contact-section { padding: 60px 20px; background-color: var(--background-light); }
-.contact-intro { text-align: center; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
-.contact-intro h2 { color: var(--mri-logo-blue); margin-bottom: 15px; }
-.contact-intro p { font-size: 1.1rem; color: var(--text-body); }
-.contact-main-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; }
-.contact-details-panel { background-color: var(--background-offwhite); padding: 30px; border-radius: 8px; }
-.contact-details-panel h3 { color: var(--mri-logo-blue); margin-bottom: 20px; font-size: 1.8rem; border-bottom: 2px solid var(--mri-logo-red); padding-bottom: 10px; }
-.contact-info-item { display: flex; align-items: flex-start; margin-bottom: 20px; font-size: 1.05rem; }
-.contact-info-item i { font-size: 1.5rem; color: var(--mri-logo-blue); margin-right: 15px; width: 25px; text-align: center; margin-top: 3px; }
-.contact-info-item a, .contact-info-item div { color: var(--text-dark); }
-.contact-info-item a:hover { color: var(--mri-logo-red); }
-.contact-details-panel .social-icons-contact { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--mri-logo-gray); }
-.contact-details-panel .social-icons-contact p { margin-bottom: 10px; font-weight: bold; color: var(--text-dark); }
-.contact-details-panel .social-icons-contact a { color: var(--mri-logo-blue); }
-.contact-details-panel .social-icons-contact a:hover { color: var(--mri-logo-red); }
-.contact-form-panel h3 { color: var(--mri-logo-blue); margin-bottom: 25px; font-size: 1.8rem; }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--text-dark); }
-.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group select, .form-group textarea {
-    width: 100%; padding: 12px; border: 1px solid var(--mri-logo-gray);
-    border-radius: 5px; font-size: 1rem; font-family: var(--font-secondary);
+.contact-section {
+    padding: 60px 20px;
+    background-color: var(--background-light);
 }
-.form-group textarea { min-height: 120px; resize: vertical; }
-.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-    outline: none; border-color: var(--mri-logo-blue);
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-intro h2 {
+    color: var(--mri-logo-blue);
+    margin-bottom: 15px;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    color: var(--text-body);
+}
+
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+}
+
+.contact-details-panel {
+    background-color: var(--background-offwhite);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-details-panel h3 {
+    color: var(--mri-logo-blue);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--mri-logo-red);
+    padding-bottom: 10px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.contact-info-item i {
+    font-size: 1.5rem;
+    color: var(--mri-logo-blue);
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.contact-info-item a,
+.contact-info-item div {
+    color: var(--text-dark);
+}
+
+.contact-info-item a:hover {
+    color: var(--mri-logo-red);
+}
+
+.contact-details-panel .social-icons-contact {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--mri-logo-gray);
+}
+
+.contact-details-panel .social-icons-contact p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.contact-details-panel .social-icons-contact a {
+    color: var(--mri-logo-blue);
+}
+
+.contact-details-panel .social-icons-contact a:hover {
+    color: var(--mri-logo-red);
+}
+
+.contact-form-panel h3 {
+    color: var(--mri-logo-blue);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--mri-logo-gray);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--mri-logo-blue);
     box-shadow: 0 0 0 2px rgba(0, 82, 165, 0.2);
 }
-.map-section { padding: 50px 20px; background-color: var(--background-offwhite); }
-.map-section h2 { text-align: center; color: var(--mri-logo-blue); margin-bottom: 30px; }
-.map-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 2px solid var(--mri-logo-blue); border-radius: 8px; }
-.map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.map-section {
+    padding: 50px 20px;
+    background-color: var(--background-offwhite);
+}
+
+.map-section h2 {
+    text-align: center;
+    color: var(--mri-logo-blue);
+    margin-bottom: 30px;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border: 2px solid var(--mri-logo-blue);
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* === Styles for Legal Pages (Privacy Policy, Terms) === */
-.legal-content-section { padding: 60px 20px; background-color: var(--background-light); }
-.legal-content-section .container { max-width: 900px; margin: auto; }
-.legal-content-section h1 { font-size: 2.5rem; color: var(--mri-logo-blue); margin-bottom: 40px; }
-.legal-content-section h2 { color: var(--mri-logo-blue); font-size: 1.8rem; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--mri-logo-gray); padding-bottom: 10px; }
-.legal-content-section p, .legal-content-section ul li { color: var(--text-body); }
-.legal-content-section strong { color: var(--text-dark); }
-.legal-content-section a { color: var(--mri-logo-blue); }
-.legal-content-section a:hover { color: var(--mri-logo-red); }
-.important-disclaimer { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; padding: 20px; margin-bottom: 30px; border-radius: 8px; font-weight: bold; text-align: center; font-size: 1.1rem; }
-.effective-date { font-style: italic; color: #555; text-align: center; margin-bottom: 30px; display: block; }
+.legal-content-section {
+    padding: 60px 20px;
+    background-color: var(--background-light);
+}
+
+.legal-content-section .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.legal-content-section h1 {
+    font-size: 2.5rem;
+    color: var(--mri-logo-blue);
+    margin-bottom: 40px;
+}
+
+.legal-content-section h2 {
+    color: var(--mri-logo-blue);
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--mri-logo-gray);
+    padding-bottom: 10px;
+}
+
+.legal-content-section p,
+.legal-content-section ul li {
+    color: var(--text-body);
+}
+
+.legal-content-section strong {
+    color: var(--text-dark);
+}
+
+.legal-content-section a {
+    color: var(--mri-logo-blue);
+}
+
+.legal-content-section a:hover {
+    color: var(--mri-logo-red);
+}
+
+.important-disclaimer {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.effective-date {
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    display: block;
+}
 
 
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
-    .hero h1 { font-size: 2.8rem; } .hero p { font-size: 1.15rem; }
-    .commitment h2 { font-size: 2.2rem; }
-    .about-content, .brand-content, .brand-content.image-right { grid-template-columns: 1fr; text-align: center; }
-    .about-content.image-first .about-image, .about-content.image-first .about-text  { order: 0; /* Reset order */ }
-    .brand-visuals img.brand-main-image { margin-bottom: 30px; }
-    .brand-details h3 { font-size: 2rem; }
-    .process-step, .process-step:nth-child(even) { grid-template-columns: 1fr; text-align: center; border-left: 5px solid var(--mri-logo-blue); border-right: none; }
-    .process-step:nth-child(even) .step-visuals, .process-step:nth-child(even) .step-description  { order: 0; /* Reset order */ }
-    .step-visuals .icon-placeholder, .step-visuals .image-placeholder-quality { margin-bottom: 20px; }
-    .contact-main-grid { grid-template-columns: 1fr; }
-    .contact-details-panel { margin-bottom: 40px; }
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
+    }
+
+    .commitment h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-content,
+    .brand-content,
+    .brand-content.image-right {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-content.image-first .about-image,
+    .about-content.image-first .about-text {
+        order: 0;
+        /* Reset order */
+    }
+
+    .brand-visuals img.brand-main-image {
+        margin-bottom: 30px;
+    }
+
+    .brand-details h3 {
+        font-size: 2rem;
+    }
+
+    .process-step,
+    .process-step:nth-child(even) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        border-left: 5px solid var(--mri-logo-blue);
+        border-right: none;
+    }
+
+    .process-step:nth-child(even) .step-visuals,
+    .process-step:nth-child(even) .step-description {
+        order: 0;
+        /* Reset order */
+    }
+
+    .step-visuals .icon-placeholder,
+    .step-visuals .image-placeholder-quality {
+        margin-bottom: 20px;
+    }
+
+    .contact-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details-panel {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 768px) {
-    header .container { flex-direction: column; align-items: flex-start; }
-    header nav ul { display: none; flex-direction: column; width: 100%; margin-top: 15px; background-color: var(--background-light); padding: 10px 0; }
-    header nav ul[data-visible="true"] { display: flex; }
-    header nav ul li { margin: 10px 0; width: 100%; text-align: center; }
-    header nav ul li a { display: block; padding: 10px; }
-    .cta-nav { display: block; margin: 10px auto; width: fit-content; }
-    .mobile-nav-toggle { display: block; position: absolute; top: 25px; right: 20px; }
-    .hero { min-height: 70vh; } .hero h1 { font-size: 2.2rem; } .hero p { font-size: 1.05rem; }
-    h1 { font-size: 2.2rem; } h2 { font-size: 1.8rem; } h3 { font-size: 1.3rem; }
-    .usp-grid, .brands-grid, .footer-grid, .product-grid {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background-color: var(--background-light);
+        padding: 10px 0;
+    }
+
+    header nav ul[data-visible="true"] {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    .cta-nav {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .usp-grid,
+    .brands-grid,
+    .footer-grid,
+    .product-grid {
         grid-template-columns: 1fr;
     }
-    .brand-card > img.brand-main-image-placeholder { height: 200px; }
-    .product-card .product-image-placeholder { height: 200px; }
-    .page-header h1 { font-size: 2.5rem; } .page-header p { font-size: 1.1rem; }
-    .about-section { padding: 40px 15px; } /* Reduced padding on smaller screens for about sections */
-    .values-section { padding: 40px 15px; }
-    .quality-process-section { padding: 40px 15px; }
-    .products-section { padding: 40px 0; } /* Keep vertical padding, horizontal is by container */
-    .contact-section { padding: 40px 15px; }
+
+    .brand-card>img.brand-main-image-placeholder {
+        height: 200px;
+    }
+
+    .product-card .product-image-placeholder {
+        height: 200px;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-header p {
+        font-size: 1.1rem;
+    }
+
+    .about-section {
+        padding: 40px 15px;
+    }
+
+    /* Reduced padding on smaller screens for about sections */
+    .values-section {
+        padding: 40px 15px;
+    }
+
+    .quality-process-section {
+        padding: 40px 15px;
+    }
+
+    .products-section {
+        padding: 40px 0;
+    }
+
+    /* Keep vertical padding, horizontal is by container */
+    .contact-section {
+        padding: 40px 15px;
+    }
 }
 
 @media (max-width: 480px) {
-    .hero h1 { font-size: 1.8rem; } .hero p { font-size: 1rem; }
-    .hero .btn { padding: 10px 20px; font-size: 0.9rem; }
-    .usp-item { padding: 15px; } .brand-info { padding: 15px; }
-    .page-header h1 { font-size: 2rem; }
-    h1 { font-size: 2rem; } h2 { font-size: 1.6rem; } h3 { font-size: 1.2rem; } /* Further reduce headings */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .usp-item {
+        padding: 15px;
+    }
+
+    .brand-info {
+        padding: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Further reduce headings */
 }
