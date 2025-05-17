@@ -492,32 +492,44 @@ header nav ul li a.active {
 .brand-card {
     background-color: var(--background-light);
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    align-items: center; /* Vertically center image and text block */
+    align-items: center;
+    /* Vertically center image and text block */
     padding: 20px;
     width: 100%;
 }
 
 .brand-visuals {
-    flex: 0 0 150px;  /* UPDATED: Define a fixed width for the image container area. Adjust as needed. */
+    flex: 0 0 150px;
+    /* UPDATED: Define a fixed width for the image container area. Adjust as needed. */
     margin-right: 25px;
-    text-align: center; /* Center the image if its actual width is less than this container */
+    text-align: center;
+    /* Center the image if its actual width is less than this container */
     /* No background color needed here now that we have a real image */
-    display: flex; /* Added to help center image if needed */
-    align-items: center; /* Added */
-    justify-content: center; /* Added */
+    display: flex;
+    /* Added to help center image if needed */
+    align-items: center;
+    /* Added */
+    justify-content: center;
+    /* Added */
 }
 
-img.brand-bag-image { /* Styles for your actual rice bag <img> tag */
+img.brand-bag-image {
+    /* Styles for your actual rice bag <img> tag */
     display: block;
-    max-width: 100%;   /* Image will not exceed the width of .brand-visuals */
-    max-height: 260px; /* Set a max-height for your vertical bag image. Adjust as needed. */
-    height: auto;      /* Maintain aspect ratio based on max-height or width */
-    object-fit: contain; /* Ensures the entire bag is visible and scaled correctly */
-    border-radius: 8px; /* Optional: if you want rounded corners on the bag image itself */
+    max-width: 100%;
+    /* Image will not exceed the width of .brand-visuals */
+    max-height: 260px;
+    /* Set a max-height for your vertical bag image. Adjust as needed. */
+    height: auto;
+    /* Maintain aspect ratio based on max-height or width */
+    object-fit: contain;
+    /* Ensures the entire bag is visible and scaled correctly */
+    border-radius: 8px;
+    /* Optional: if you want rounded corners on the bag image itself */
 }
 
 .brand-info {
@@ -528,60 +540,89 @@ img.brand-bag-image { /* Styles for your actual rice bag <img> tag */
     align-items: flex-start;
 }
 
-.brand-logo-inline { /* Style if you use a small logo within .brand-info */
+.brand-logo-inline {
+    /* Style if you use a small logo within .brand-info */
     max-height: 30px;
     margin-bottom: 8px;
-    align-self: flex-start; /* Ensure logo is left aligned */
+    align-self: flex-start;
+    /* Ensure logo is left aligned */
 }
 
 .brand-info h3 {
     color: var(--mri-logo-blue);
     margin-top: 0;
-    font-size: 1.8rem; /* Or adjust as needed */
-    text-align: center; /* Ensure heading is center aligned */
+    font-size: 1.8rem;
+    /* Or adjust as needed */
+    text-align: center;
+    /* Ensure heading is center aligned */
 }
+
 .brand-info p {
     margin-bottom: 20px;
     font-size: 0.95rem;
     /* flex-grow: 1; /* This might not be needed if button is consistently last */
-    text-align: left; /* Ensure paragraph is left aligned */
+    text-align: left;
+    /* Ensure paragraph is left aligned */
 }
+
 .brand-info .btn {
-    margin-top: 15px; /* Provide some space above the button */
-    align-self: center; /* Ensure button is left-aligned */
+    margin-top: 15px;
+    /* Provide some space above the button */
+    align-self: center;
+    /* Ensure button is left-aligned */
 }
 
 /* Responsive adjustment for brand cards if they were in a multi-column grid */
-@media (max-width: 768px) { /* Example breakpoint, adjust as needed */
-    .brands-grid { /* Assuming .brands-grid is the parent of .brand-card */
+@media (max-width: 768px) {
+
+    /* Example breakpoint, adjust as needed */
+    .brands-grid {
+        /* Assuming .brands-grid is the parent of .brand-card */
         /* If you want brand cards to stack on small screens: */
         /* grid-template-columns: 1fr; */
     }
+
     .brand-card {
-        flex-direction: column; /* Stack image above text on small screens */
-        align-items: center; /* Center items when stacked */
-        text-align: center; /* Center text when stacked */
+        flex-direction: column;
+        /* Stack image above text on small screens */
+        align-items: center;
+        /* Center items when stacked */
+        text-align: center;
+        /* Center text when stacked */
     }
+
     .brand-visuals {
         margin-right: 0;
-        margin-bottom: 20px; /* Space between image and text when stacked */
-        width: 100%; /* Allow visual block to be full width */
+        margin-bottom: 20px;
+        /* Space between image and text when stacked */
+        width: 100%;
+        /* Allow visual block to be full width */
     }
+
     .image-placeholder-brand-bag,
     img.brand-bag-image {
-        margin-left: auto; /* Center image within .brand-visuals */
+        margin-left: auto;
+        /* Center image within .brand-visuals */
         margin-right: auto;
-        max-width: 60%; /* Adjust as needed for stacked view */
+        max-width: 60%;
+        /* Adjust as needed for stacked view */
     }
+
     .brand-info {
-        align-items: center; /* Center text block items */
-        text-align: center; /* Center text within info block */
+        align-items: center;
+        /* Center text block items */
+        text-align: center;
+        /* Center text within info block */
     }
-    .brand-info h3, .brand-info p {
+
+    .brand-info h3,
+    .brand-info p {
         text-align: center;
     }
+
     .brand-info .btn {
-        align-self: center; /* Center button when stacked */
+        align-self: center;
+        /* Center button when stacked */
     }
 }
 
@@ -589,6 +630,7 @@ img.brand-bag-image { /* Styles for your actual rice bag <img> tag */
     text-align: center;
     margin-top: 30px;
 }
+
 .all-varieties-link p {
     font-style: italic;
     color: #555;
@@ -770,21 +812,28 @@ footer {
 
 /* Page Header specific background for About Us */
 .page-header.about-us-bg {
-    background-image: url('images/about-us-banner.jpg'); /* Replace with your actual banner image */
+    background-image: url('images/about-us-banner.jpg');
+    /* Replace with your actual banner image */
     /* The dark overlay is handled by the generic .page-header::before rule */
 }
 
 .about-section {
     padding: 60px 20px;
-    background-color: var(--background-light); /* Default for first .about-section */
+    background-color: var(--background-light);
+    /* Default for first .about-section */
 }
+
 /* Alternating backgrounds for .about-section blocks */
-main > .about-section:nth-child(odd) { /* e.g. intro-section (if it's the 1st child of main of this type) */
+main>.about-section:nth-child(odd) {
+    /* e.g. intro-section (if it's the 1st child of main of this type) */
     background-color: var(--background-light);
 }
-main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd child of main of this type) */
+
+main>.about-section:nth-child(even) {
+    /* e.g. legacy-section (if it's the 2nd child of main of this type) */
     background-color: var(--background-offwhite);
 }
+
 /* Note: If other sections like .values-section are between .about-section blocks,
    this simple odd/even might not give perfect alternation for all .about-section blocks.
    In that case, explicitly add classes like .bg-white or .bg-offwhite in your HTML.
@@ -798,15 +847,18 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns by default */
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns by default */
     gap: 50px;
     align-items: center;
     width: 100%;
 }
+
 /* Class to flip order: image on left, text on right */
 .about-content.image-first .about-image {
     order: -1;
 }
+
 .about-content.image-first .about-text {
     order: 1;
 }
@@ -814,15 +866,18 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
 .about-text {
     /* Text content will flow naturally */
 }
+
 .about-text h2 {
     color: var(--mri-logo-blue);
     margin-bottom: 20px;
     font-size: 2.5rem;
 }
+
 .about-text .highlight {
     color: var(--mri-logo-red);
     font-weight: bold;
 }
+
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -831,18 +886,23 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
 }
 
 .about-image {
-    position: relative; /* Needed for padding-bottom aspect ratio trick */
-    width: 100%; /* Takes the width of its grid column */
+    position: relative;
+    /* Needed for padding-bottom aspect ratio trick */
+    width: 100%;
+    /* Takes the width of its grid column */
     /* Aspect ratio e.g., 4:3. (3 / 4) * 100% = 75% */
     /* For a more portrait/square aspect ratio for these images: */
-    padding-bottom: 75%; /* For 1:1 aspect ratio (square) */
+    padding-bottom: 75%;
+    /* For 1:1 aspect ratio (square) */
     /* padding-bottom: 125%; /* For 4:5 aspect ratio (more vertical) */
     /* padding-bottom: 75%; /* For 4:3 aspect ratio (more landscape) */
-    height: 0; /* Crucial for the padding-bottom trick */
+    height: 0;
+    /* Crucial for the padding-bottom trick */
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    background-color: #e9e9e9; /* Background for while image loads or if contain leaves space */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background-color: #e9e9e9;
+    /* Background for while image loads or if contain leaves space */
 }
 
 .about-image img {
@@ -851,48 +911,58 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Or 'contain' */
+    object-fit: cover;
+    /* Or 'contain' */
     /* border-radius: 10px; /* Already on parent */
 }
 
 
 .values-section {
     padding: 60px 20px;
-    background-color: var(--background-subtle-gray); /* Lightest gray for distinct section */
+    background-color: var(--background-subtle-gray);
+    /* Lightest gray for distinct section */
 }
+
 .values-section h2.section-title {
     text-align: center;
     color: var(--mri-logo-blue);
     margin-bottom: 40px;
     font-size: 2.2rem;
 }
+
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
+
 .value-item {
     background-color: var(--background-light);
     padding: 30px 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .value-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 82, 165, 0.15); /* MRI Blue shadow tint */
+    box-shadow: 0 8px 25px rgba(0, 82, 165, 0.15);
+    /* MRI Blue shadow tint */
 }
-.value-item i { /* For Font Awesome icons */
+
+.value-item i {
+    /* For Font Awesome icons */
     font-size: 3rem;
     color: var(--mri-logo-blue);
     margin-bottom: 20px;
     display: block;
     line-height: 1;
 }
+
 .value-item h3 {
     font-family: var(--font-primary);
     color: var(--text-dark);
@@ -900,12 +970,14 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
     font-size: 1.4rem;
     font-weight: 700;
 }
+
 .value-item p {
     font-family: var(--font-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text-body);
-    flex-grow: 1; /* Helps if cards have slightly different text lengths */
+    flex-grow: 1;
+    /* Helps if cards have slightly different text lengths */
 }
 
 .cta-about {
@@ -914,10 +986,12 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
     background-color: var(--mri-logo-blue);
     color: var(--text-light);
 }
+
 .cta-about h2 {
     color: var(--text-light);
     margin-bottom: 20px;
 }
+
 .cta-about p {
     color: var(--text-light);
     margin-bottom: 30px;
@@ -925,46 +999,68 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
     margin-left: auto;
     margin-right: auto;
 }
-.cta-about .btn-primary { /* Button on dark blue background */
-    background-color: var(--mri-logo-red); /* Red stands out */
+
+.cta-about .btn-primary {
+    /* Button on dark blue background */
+    background-color: var(--mri-logo-red);
+    /* Red stands out */
     border-color: var(--mri-logo-red);
     color: var(--text-light);
 }
+
 .cta-about .btn-primary:hover {
-    background-color: #AE1F1F; /* Darker Red */
+    background-color: #AE1F1F;
+    /* Darker Red */
     border-color: #AE1F1F;
 }
-.cta-about .btn-secondary { /* Light outline on dark blue background */
+
+.cta-about .btn-secondary {
+    /* Light outline on dark blue background */
     color: var(--text-light);
     border-color: var(--text-light);
 }
+
 .cta-about .btn-secondary:hover {
     background-color: var(--text-light);
     color: var(--mri-logo-blue);
 }
 
 /* Responsive adjustments for About Us page elements */
-@media (max-width: 992px) { /* Or your preferred tablet breakpoint e.g. 768px */
+@media (max-width: 992px) {
+
+    /* Or your preferred tablet breakpoint e.g. 768px */
     .about-content {
-        grid-template-columns: 1fr; /* Stack text/image sections */
+        grid-template-columns: 1fr;
+        /* Stack text/image sections */
         gap: 30px;
-        text-align: center; /* Center align text when stacked */
+        text-align: center;
+        /* Center align text when stacked */
     }
+
     .about-content.image-first .about-image,
     .about-content.image-first .about-text {
-        order: 0; /* Reset order for stacked layout */
+        order: 0;
+        /* Reset order for stacked layout */
     }
-    .about-image { /* Container for the image */
-        margin-bottom: 20px; /* Add space below image when stacked */
+
+    .about-image {
+        /* Container for the image */
+        margin-bottom: 20px;
+        /* Add space below image when stacked */
     }
+
     .about-image img {
-        max-width: 100%; /* Ensure image doesn't overflow */
+        max-width: 100%;
+        /* Ensure image doesn't overflow */
         margin-left: auto;
         margin-right: auto;
     }
+
     .about-text h2 {
-        font-size: 2rem; /* Adjust heading size */
+        font-size: 2rem;
+        /* Adjust heading size */
     }
+
     .values-grid {
         /* Uses global responsive rule: grid-template-columns: 1fr; */
     }
@@ -972,16 +1068,35 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
 
 /* Smaller screen adjustments if needed beyond global ones */
 @media (max-width: 768px) {
-    .about-section { padding: 40px 15px; }
-    .values-section { padding: 40px 15px; }
-    .page-header.about-us-bg h1 { font-size: 2.5rem; }
-    .page-header.about-us-bg p { font-size: 1.1rem; }
+    .about-section {
+        padding: 40px 15px;
+    }
+
+    .values-section {
+        padding: 40px 15px;
+    }
+
+    .page-header.about-us-bg h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-header.about-us-bg p {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .about-text h2 { font-size: 1.8rem; }
-    .page-header.about-us-bg h1 { font-size: 2rem; }
-    .value-item h3 { font-size: 1.3rem; }
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .page-header.about-us-bg h1 {
+        font-size: 2rem;
+    }
+
+    .value-item h3 {
+        font-size: 1.3rem;
+    }
 }
 
 /* === Styles for Products Page (products.html) === */
@@ -1120,7 +1235,7 @@ main > .about-section:nth-child(even) { /* e.g. legacy-section (if it's the 2nd 
 
 .product-info .btn {
     margin-top: auto;
-    align-self: center; 
+    align-self: center;
 }
 
 
